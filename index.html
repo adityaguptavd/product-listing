@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> -->
+    <link rel="prefetch" href="https://fakestoreapi.com/products">
+</head>
+<body>
+    <header hidden>
+        <div class="container-full">
+            <div class="container">
+                <div class="row align-center">
+                    <div class="col-6">
+                        <b>HomeDepot</b>
+                    </div>
+                    <div class="col-6">
+                        <div class="flex align-center gap-1 justify-end">
+                            <form role="search" class="search">
+                                <input type="text" size="6" placeholder="Search..." name="query" id="query">
+                                <label for="query" id="query-label" aria-label="Search"><span class="fa-solid fa-magnifying-glass icon-search"></span></label>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-7 col-p-12 flex align-center">
+                        <div class="flex column gap-1">
+                            <h1>Product catalog</h1>
+                            <nav aria-label="breadcrumb" class="breadcrumb">
+                                <ol class="flex align-center">
+                                    <li>Shop /</li>
+                                    <li><span>All</span> Products</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-4 col-p-12 center-center">
+                        <img src="./img/product.webp" alt="Banner Product" class="img-resp product" width="300" height="100">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="overlay active">
+            <div class="loader"></div>
+        </div>
+        <div class="products">
+            <div class="container">
+                <div class="mssg"></div>
+                <div class="row">
+                    <aside class="categories col-3 col-p-12">
+                        <h2>Categories</h2>
+                        <ul class="product-category">
+                        </ul>
+                    </aside>
+                    <div class="col-9 col-p-12">
+                        <div class="sort flex gap-1">
+                            <b>Sort by :</b>
+                            <div class="dropdown">
+                                <button class="sort-btn">Ascending</button>
+                                <ul class="sort-list">
+                                    <li data-sort="asc" class="selected" id="asc">Ascending</li>
+                                    <li data-sort="desc" id="desc">Descending</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="products-list">
+                            <div class="row gap">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <script type="module" src="./js/script.js"></script>
+</body>
+</html>
